@@ -55,7 +55,7 @@ export class DevStarter {
     }
 
     console.log('' + args.join(' '));
-    const serverProcess = spawn('node_modules/.bin/webpack-dev-server', args, {shell: true});
+    const serverProcess = spawn('node_modules/.bin/webpack-dev-server', args);
     serverProcess.stdout.on('data', (data) => {
       console.log(data.toString());
     });
